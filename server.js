@@ -4,7 +4,7 @@ var url = require("url");
 var port = process.argv[2];
 
 if (!port) {
-  console.log("请指定端口号好不啦？\n node server.js 8888 这样不会吗？");
+  console.log("请指定端口号好不啦？\nnode server.js 8888 这样不会吗？");
   process.exit(1);
 }
 
@@ -49,7 +49,7 @@ var server = http.createServer(function (request, response) {
   } else {
     response.statusCode = 404;
     response.setHeader("Content-Type", "text/html;charset=utf-8");
-    response.write(`你访问的页面不存在`);
+    response.write(`你输入的路径不存在对应的内容`);
     response.end();
   }
 
